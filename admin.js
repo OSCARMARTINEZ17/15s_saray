@@ -25,6 +25,12 @@ const totalMensajes = document.getElementById("totalMensajes");
 
 const loading = document.getElementById("loading");
 
+const invitadosCounter = document.getElementById("invitadosCounter");
+
+const confirmacionesCounter = document.getElementById("confirmacionesCounter");
+
+const mensajesCounter = document.getElementById("mensajesCounter");
+
 /****************************************************
  * CARGAR TODO
  ****************************************************/
@@ -65,6 +71,10 @@ async function cargarDatos() {
 
 function mostrarInvitados(invitados) {
   invitadosTable.innerHTML = "";
+
+  if (invitadosCounter) {
+    invitadosCounter.textContent = `${invitados.length} registros`;
+  }
 
   if (invitados.length === 0) {
     invitadosTable.innerHTML = `
@@ -132,6 +142,10 @@ function mostrarInvitados(invitados) {
 function mostrarConfirmaciones(confirmaciones) {
   confirmacionesTable.innerHTML = "";
 
+  if (confirmacionesCounter) {
+    confirmacionesCounter.textContent = `${confirmaciones.length} registros`;
+  }
+
   if (confirmaciones.length === 0) {
     confirmacionesTable.innerHTML = `
             <tr>
@@ -154,7 +168,13 @@ function mostrarConfirmaciones(confirmaciones) {
 
       const acompanantes = confirmacion[2] || "0";
 
-      const respuesta = confirmacion[3] || "";
+      const respuesta = (confirmacion[3] || "").toLowerCase();
+
+      const asistira = respuesta === "si";
+
+      const badge = asistira
+        ? `<span class="badge confirmed">✓ Asistirá</span>`
+        : `<span class="badge declined">✗ No asistirá</span>`;
 
       const fila = document.createElement("tr");
 
@@ -174,7 +194,7 @@ function mostrarConfirmaciones(confirmaciones) {
                     </td>
 
                     <td>
-                        ✓ ${escapeHTML(respuesta)}
+                        ${badge}
                     </td>
                     `;
 
@@ -188,6 +208,10 @@ function mostrarConfirmaciones(confirmaciones) {
 
 function mostrarMensajes(mensajes) {
   mensajesContainer.innerHTML = "";
+
+  if (mensajesCounter) {
+    mensajesCounter.textContent = `${mensajes.length} mensajes`;
+  }
 
   if (mensajes.length === 0) {
     mensajesContainer.innerHTML = `
@@ -264,12 +288,19 @@ function actualizarEstadisticas(datos) {
  ****************************************************/
 
 function crearLink(nombre, acompanantes, para) {
+  /*
+     Importante: el parámetro debe llamarse "personas"
+     porque así lo lee script.js en la página pública
+     (params.get("personas")). Antes decía "acompanantes"
+     y por eso la invitación siempre mostraba "1 persona".
+     */
+
   return (
     "https://oscarmartinez17.github.io/" +
     "primera_comunion_saray/" +
     "?nombre=" +
     encodeURIComponent(nombre) +
-    "&acompanantes=" +
+    "&personas=" +
     encodeURIComponent(acompanantes) +
     "&para=" +
     encodeURIComponent(para)
@@ -302,7 +333,7 @@ function mostrarLoading(mostrar) {
     return;
   }
 
-  loading.style.display = mostrar ? "block" : "none";
+  loading.classList.toggle("show", mostrar);
 }
 
 /****************************************************
@@ -314,6 +345,30 @@ const refreshButton = document.getElementById("refreshButton");
 if (refreshButton) {
   refreshButton.addEventListener("click", cargarDatos);
 }
+
+/****************************************************
+ * PESTAÑAS
+ ****************************************************/
+
+const tabs = document.querySelectorAll(".tab");
+
+const panels = document.querySelectorAll(".panel");
+
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    tabs.forEach((t) => t.classList.remove("active"));
+
+    panels.forEach((p) => p.classList.remove("active"));
+
+    tab.classList.add("active");
+
+    const panel = document.getElementById("panel-" + tab.dataset.tab);
+
+    if (panel) {
+      panel.classList.add("active");
+    }
+  });
+});
 
 /****************************************************
  * INICIAR

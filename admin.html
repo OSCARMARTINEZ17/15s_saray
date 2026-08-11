@@ -1,465 +1,180 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-
-:root {
-
-    --gold: #b28a52;
-    --pink: #a65f78;
-    --cream: #faf6f1;
-    --white: #ffffff;
-    --text: #5e5a58;
-    --border: #eadfd4;
-
-}
-
-
-body {
-
-    background:
-        var(--cream);
-
-    color:
-        var(--text);
-
-    font-family:
-        Arial,
-        sans-serif;
-
-}
-
-
-.admin-header {
-
-    background:
-        var(--white);
-
-    border-bottom:
-        1px solid
-        var(--border);
-
-    padding:
-        25px 6%;
-
-    display: flex;
-
-    justify-content:
-        space-between;
-
-    align-items: center;
-
-}
-
-
-.admin-header span {
-
-    color:
-        var(--gold);
-
-    font-size:
-        11px;
-
-    letter-spacing:
-        3px;
-
-    text-transform:
-        uppercase;
-
-}
-
-
-.admin-header h1 {
-
-    color:
-        var(--pink);
-
-    font-family:
-        Georgia,
-        serif;
-
-    font-size:
-        32px;
-
-    font-weight:
-        normal;
-
-}
-
-
-.refresh-button {
-
-    background:
-        var(--gold);
-
-    color:
-        white;
-
-    border:
-        none;
-
-    border-radius:
-        25px;
-
-    padding:
-        12px 22px;
-
-    cursor:
-        pointer;
-
-}
-
-
-main {
-
-    width:
-        88%;
-
-    max-width:
-        1400px;
-
-    margin:
-        40px auto;
-
-}
-
-
-.stats {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
-    gap:
-        20px;
-
-    margin-bottom:
-        30px;
-
-}
-
-
-.stat-card {
-
-    background:
-        white;
-
-    border:
-        1px solid
-        var(--border);
-
-    border-radius:
-        18px;
-
-    padding:
-        25px;
-
-}
-
-
-.stat-card span {
-
-    display:
-        block;
-
-    color:
-        #888;
-
-    font-size:
-        13px;
-
-}
-
-
-.stat-card strong {
-
-    display:
-        block;
-
-    color:
-        var(--pink);
-
-    font-family:
-        Georgia,
-        serif;
-
-    font-size:
-        40px;
-
-    margin-top:
-        5px;
-
-}
-
-
-.panel {
-
-    background:
-        white;
-
-    border:
-        1px solid
-        var(--border);
-
-    border-radius:
-        20px;
-
-    margin-bottom:
-        30px;
-
-    overflow:
-        hidden;
-
-}
-
-
-.panel-title {
-
-    padding:
-        25px;
-
-    border-bottom:
-        1px solid
-        var(--border);
-
-}
-
-
-.panel-title span {
-
-    color:
-        var(--gold);
-
-    font-size:
-        10px;
-
-    letter-spacing:
-        3px;
-
-}
-
-
-.panel-title h2 {
-
-    color:
-        var(--pink);
-
-    font-family:
-        Georgia,
-        serif;
-
-    font-size:
-        28px;
-
-    font-weight:
-        normal;
-
-}
-
-
-.table-container {
-
-    width:
-        100%;
-
-    overflow-x:
-        auto;
-
-}
-
-
-table {
-
-    width:
-        100%;
-
-    border-collapse:
-        collapse;
-
-}
-
-
-th,
-td {
-
-    padding:
-        15px 20px;
-
-    text-align:
-        left;
-
-    border-bottom:
-        1px solid
-        #f0e9e2;
-
-}
-
-
-th {
-
-    background:
-        #fcf8f4;
-
-    color:
-        var(--gold);
-
-    font-size:
-        12px;
-
-    text-transform:
-        uppercase;
-
-}
-
-
-td {
-
-    font-size:
-        14px;
-
-}
-
-
-.link-button {
-
-    color:
-        var(--pink);
-
-    text-decoration:
-        none;
-
-    font-weight:
-        bold;
-
-}
-
-
-.messages-container {
-
-    padding:
-        25px;
-
-}
-
-
-.message-card {
-
-    border:
-        1px solid
-        var(--border);
-
-    border-radius:
-        15px;
-
-    padding:
-        20px;
-
-    margin-bottom:
-        15px;
-
-}
-
-
-.message-card strong {
-
-    color:
-        var(--pink);
-
-}
-
-
-.message-card small {
-
-    color:
-        #999;
-
-    display:
-        block;
-
-    margin:
-        5px 0 10px;
-
-}
-
-
-.loading {
-
-    position:
-        fixed;
-
-    bottom:
-        20px;
-
-    right:
-        20px;
-
-    background:
-        #333;
-
-    color:
-        white;
-
-    padding:
-        12px 20px;
-
-    border-radius:
-        25px;
-
-    font-size:
-        13px;
-
-}
-
-
-@media (
-    max-width: 800px
-) {
-
-    .stats {
-
-        grid-template-columns:
-            repeat(2, 1fr);
-
-    }
-
-
-    .admin-header {
-
-        flex-direction:
-            column;
-
-        align-items:
-            flex-start;
-
-        gap:
-            20px;
-
-    }
-
-}
-
-
-@media (
-    max-width: 500px
-) {
-
-    .stats {
-
-        grid-template-columns:
-            1fr;
-
-    }
-
-
-    main {
-
-        width:
-            94%;
-
-    }
-
-}
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Panel de administración | Primera Comunión de Saray</title>
+
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+
+  <body>
+    <!-- =====================================================
+     ENCABEZADO
+===================================================== -->
+
+    <header class="admin-header">
+      <div class="header-content">
+        <div>
+          <span class="eyebrow">Panel de administración</span>
+          <h1>Primera Comunión de Saray</h1>
+          <p>Invitados, confirmaciones y mensajes</p>
+        </div>
+
+        <button id="refreshButton" class="refresh-btn">⟳ Actualizar</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- =====================================================
+     ESTADÍSTICAS
+===================================================== -->
+
+      <section class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">👥</div>
+
+          <div>
+            <span id="totalInvitados" class="stat-number">0</span>
+            <span class="stat-label">Invitados</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon">✅</div>
+
+          <div>
+            <span id="totalConfirmados" class="stat-number">0</span>
+            <span class="stat-label">Confirmados</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon">🧑‍🤝‍🧑</div>
+
+          <div>
+            <span id="totalPersonas" class="stat-number">0</span>
+            <span class="stat-label">Personas invitadas</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon">💌</div>
+
+          <div>
+            <span id="totalMensajes" class="stat-number">0</span>
+            <span class="stat-label">Mensajes</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+     PESTAÑAS
+===================================================== -->
+
+      <nav class="tabs">
+        <button class="tab active" data-tab="invitados">
+          <span>👥</span>Invitados
+        </button>
+
+        <button class="tab" data-tab="confirmaciones">
+          <span>✅</span>Confirmaciones
+        </button>
+
+        <button class="tab" data-tab="mensajes"><span>💌</span>Mensajes</button>
+      </nav>
+
+      <!-- =====================================================
+     PANEL: INVITADOS
+===================================================== -->
+
+      <section id="panel-invitados" class="panel active">
+        <div class="panel-header">
+          <div>
+            <span class="panel-eyebrow">Lista completa</span>
+            <h2>Invitados</h2>
+          </div>
+
+          <span class="counter" id="invitadosCounter">0 registros</span>
+        </div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Acompañantes</th>
+                <th>Para</th>
+                <th>Enlace</th>
+              </tr>
+            </thead>
+
+            <tbody id="invitadosTable">
+              <tr>
+                <td colspan="4" class="loading">Cargando invitados…</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- =====================================================
+     PANEL: CONFIRMACIONES
+===================================================== -->
+
+      <section id="panel-confirmaciones" class="panel">
+        <div class="panel-header">
+          <div>
+            <span class="panel-eyebrow">Respuestas recibidas</span>
+            <h2>Confirmaciones</h2>
+          </div>
+
+          <span class="counter" id="confirmacionesCounter">0 registros</span>
+        </div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Fecha</th>
+                <th>Nombre</th>
+                <th>Acompañantes</th>
+                <th>Respuesta</th>
+              </tr>
+            </thead>
+
+            <tbody id="confirmacionesTable">
+              <tr>
+                <td colspan="4" class="loading">Cargando confirmaciones…</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- =====================================================
+     PANEL: MENSAJES
+===================================================== -->
+
+      <section id="panel-mensajes" class="panel">
+        <div class="panel-header">
+          <div>
+            <span class="panel-eyebrow">Muro de mensajes</span>
+            <h2>Mensajes</h2>
+          </div>
+
+          <span class="counter" id="mensajesCounter">0 mensajes</span>
+        </div>
+
+        <div class="messages-container" id="mensajesContainer">
+          <p class="loading">Cargando mensajes…</p>
+        </div>
+      </section>
+    </main>
+
+    <div id="loading" class="notification">Cargando datos…</div>
+
+    <script src="admin.js"></script>
+  </body>
+</html>
