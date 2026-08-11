@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Admin | Primera Comunión de Saray</title>
+
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+
+  <body>
+    <!-- ================================
+         ENCABEZADO
+    ================================= -->
+
+    <header class="admin-header">
+      <div class="header-content">
+        <div>
+          <span class="eyebrow"> PANEL DE ADMINISTRACIÓN </span>
+
+          <h1>Primera Comunión</h1>
+
+          <p>Saray Martínez Suárez</p>
+        </div>
+
+        <button class="refresh-btn" id="refreshBtn">↻ Actualizar</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- ================================
+             ESTADÍSTICAS
+        ================================= -->
+
+      <section class="stats-grid">
+        <article class="stat-card">
+          <div class="stat-icon">👥</div>
+
+          <div>
+            <span class="stat-number" id="totalInvitados"> 0 </span>
+
+            <span class="stat-label"> Invitados </span>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon">✓</div>
+
+          <div>
+            <span class="stat-number" id="totalConfirmados"> 0 </span>
+
+            <span class="stat-label"> Confirmados </span>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon">✕</div>
+
+          <div>
+            <span class="stat-number" id="totalNoAsisten"> 0 </span>
+
+            <span class="stat-label"> No asistirán </span>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon">♡</div>
+
+          <div>
+            <span class="stat-number" id="totalPersonas"> 0 </span>
+
+            <span class="stat-label"> Personas confirmadas </span>
+          </div>
+        </article>
+      </section>
+
+      <!-- ================================
+             PESTAÑAS
+        ================================= -->
+
+      <nav class="tabs">
+        <button class="tab active" data-panel="invitados">
+          <span>👥</span>
+          Invitados
+        </button>
+
+        <button class="tab" data-panel="confirmaciones">
+          <span>✓</span>
+          Confirmaciones
+        </button>
+
+        <button class="tab" data-panel="mensajes">
+          <span>♡</span>
+          Mensajes
+        </button>
+      </nav>
+
+      <!-- ================================
+             PANEL INVITADOS
+        ================================= -->
+
+      <section class="panel active" id="panel-invitados">
+        <div class="panel-header">
+          <div>
+            <span class="panel-eyebrow"> LISTA </span>
+
+            <h2>Invitados</h2>
+          </div>
+
+          <span class="counter" id="invitadosCounter"> 0 invitados </span>
+        </div>
+
+        <div id="listaInvitados" class="table-wrapper">
+          <div class="loading">Cargando invitados...</div>
+        </div>
+      </section>
+
+      <!-- ================================
+             PANEL CONFIRMACIONES
+        ================================= -->
+
+      <section class="panel" id="panel-confirmaciones">
+        <div class="panel-header">
+          <div>
+            <span class="panel-eyebrow"> RESPUESTAS </span>
+
+            <h2>Confirmaciones</h2>
+          </div>
+
+          <span class="counter" id="confirmacionesCounter"> 0 respuestas </span>
+        </div>
+
+        <div id="listaConfirmaciones" class="table-wrapper">
+          <div class="loading">Cargando confirmaciones...</div>
+        </div>
+      </section>
+
+      <!-- ================================
+             PANEL MENSAJES
+        ================================= -->
+
+      <section class="panel" id="panel-mensajes">
+        <div class="panel-header">
+          <div>
+            <span class="panel-eyebrow"> LIBRO DE MENSAJES </span>
+
+            <h2>Mensajes</h2>
+          </div>
+
+          <span class="counter" id="mensajesCounter"> 0 mensajes </span>
+        </div>
+
+        <div id="listaMensajes" class="messages-container">
+          <div class="loading">Cargando mensajes...</div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================================
+         NOTIFICACIÓN
+    ================================= -->
+
+    <div id="notification" class="notification"></div>
+
+    <script src="admin.js"></script>
+  </body>
+</html>
