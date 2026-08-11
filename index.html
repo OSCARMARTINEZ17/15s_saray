@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Saray Martínez Suárez | Mi Primera Comunión</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- =====================================================
+     SOBRE DE BIENVENIDA
+===================================================== -->
+
+    <div id="envelope">
+      <div class="letter">
+        <div class="cross">✝</div>
+
+        <p class="eyebrow">Una invitación muy especial</p>
+
+        <h1>Saray</h1>
+
+        <h2>Mi Primera Comunión</h2>
+
+        <p>
+          12 de septiembre de 2026
+          <br />
+          7:00 p. m.
+        </p>
+
+        <button id="openInvitation">Abrir invitación</button>
+      </div>
+    </div>
+
+    <!-- =====================================================
+     PORTADA
+===================================================== -->
+
+    <header class="hero">
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <div class="hero-cross">✝</div>
+
+        <p class="eyebrow light">Con mucha alegría</p>
+
+        <h1>Saray Martínez Suárez</h1>
+
+        <h2>Mi Primera Comunión</h2>
+
+        <p class="hero-date">12 de septiembre · 7:00 p. m.</p>
+
+        <a href="#fecha" class="btn"> Ver invitación </a>
+      </div>
+    </header>
+
+    <main>
+      <!-- =====================================================
+     INTRODUCCIÓN
+===================================================== -->
+
+      <section class="intro reveal">
+        <p class="script">Un día para guardar en el corazón</p>
+
+        <p>
+          Con mucha alegría quiero compartir contigo este momento tan especial
+          de mi vida y celebrar junto a mi familia este hermoso día.
+        </p>
+      </section>
+
+      <!-- =====================================================
+     FRASE / VERSÍCULO
+===================================================== -->
+
+      <section class="quote-section reveal">
+        <div class="quote-card">
+          <span class="quote-mark"> “ </span>
+
+          <p id="verseText">
+            Aquí añadiremos poco a poco la frase o el versículo especial.
+          </p>
+
+          <span class="signature"> — Frase especial </span>
+        </div>
+      </section>
+
+      <!-- =====================================================
+     FECHA
+===================================================== -->
+
+      <section id="fecha" class="reveal">
+        <h2 class="section-title">La fecha</h2>
+
+        <div class="calendar-card">
+          <p class="month">SEPTIEMBRE 2026</p>
+
+          <div class="weekdays">
+            <span>DOM</span>
+            <span>LUN</span>
+            <span>MAR</span>
+            <span>MIÉ</span>
+            <span>JUE</span>
+            <span>VIE</span>
+            <span>SÁB</span>
+          </div>
+
+          <div class="calendar">
+            <span></span>
+            <span></span>
+
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+
+            <span>6</span>
+            <span>7</span>
+            <span>8</span>
+            <span>9</span>
+            <span>10</span>
+            <span>11</span>
+
+            <strong> 12 </strong>
+
+            <span>13</span>
+            <span>14</span>
+            <span>15</span>
+            <span>16</span>
+            <span>17</span>
+            <span>18</span>
+            <span>19</span>
+
+            <span>20</span>
+            <span>21</span>
+            <span>22</span>
+            <span>23</span>
+            <span>24</span>
+            <span>25</span>
+            <span>26</span>
+
+            <span>27</span>
+            <span>28</span>
+            <span>29</span>
+            <span>30</span>
+          </div>
+
+          <div class="event-date">
+            <span> 12 </span>
+
+            <div>
+              <strong> Sábado </strong>
+
+              <small> 7:00 p. m. </small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+     CUENTA REGRESIVA
+===================================================== -->
+
+      <section class="countdown-section reveal">
+        <p class="script">Cada vez falta menos</p>
+
+        <h2 class="section-title">Cuenta regresiva</h2>
+
+        <div class="countdown">
+          <div class="time-box">
+            <strong id="days"> 0 </strong>
+
+            <span> Días </span>
+          </div>
+
+          <div class="time-box">
+            <strong id="hours"> 0 </strong>
+
+            <span> Horas </span>
+          </div>
+
+          <div class="time-box">
+            <strong id="minutes"> 0 </strong>
+
+            <span> Minutos </span>
+          </div>
+
+          <div class="time-box">
+            <strong id="seconds"> 0 </strong>
+
+            <span> Segundos </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+     EVENTO
+===================================================== -->
+
+      <section id="evento" class="reveal">
+        <h2 class="section-title">Celebremos juntos</h2>
+
+        <p class="section-text">
+          Después de este momento tan especial, queremos compartir una hermosa
+          celebración contigo.
+        </p>
+
+        <div class="event-card">
+          <div class="event-icon">🎉</div>
+
+          <p class="event-time">7:00 P. M.</p>
+
+          <h3>Salón de evento</h3>
+
+          <p>Centro Vacacional Picaleña de la Policía</p>
+
+          <a
+            class="map-btn"
+            href="https://maps.app.goo.gl/5Yh1WWgM9jHkCyzw5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            📍 Cómo llegar
+          </a>
+        </div>
+      </section>
+
+      <!-- =====================================================
+     SARAY
+===================================================== -->
+
+      <section id="saray" class="reveal">
+        <h2 class="section-title">Saray</h2>
+
+        <div class="portrait">
+          <img src="multimedia/saray.jpg" alt="Saray Martínez Suárez" />
+        </div>
+
+        <p class="section-text">
+          Hoy comienza una nueva etapa de fe y alegría. Gracias por acompañarme
+          y hacer parte de este día tan importante.
+        </p>
+      </section>
+
+      <!-- =====================================================
+     GALERÍA
+===================================================== -->
+
+      <section id="galeria" class="reveal">
+        <h2 class="section-title">Mis momentos</h2>
+
+        <p class="section-text">
+          Algunos momentos especiales que quiero compartir contigo.
+        </p>
+
+        <div class="gallery">
+          <img src="multimedia/foto1.jpg" alt="Saray" />
+
+          <img src="multimedia/foto2.jpg" alt="Saray" />
+
+          <img src="multimedia/foto3.jpg" alt="Saray" />
+
+          <img src="multimedia/foto4.jpg" alt="Saray" />
+        </div>
+      </section>
+
+      <!-- =====================================================
+     REGALO
+===================================================== -->
+
+      <section class="reveal">
+        <h2 class="section-title">Un detalle con cariño</h2>
+
+        <div class="gift-card">
+          <div class="gift-icon">🎁</div>
+
+          <h3>Tu presencia es mi mejor regalo</h3>
+
+          <p>
+            Lo más importante es compartir este día contigo. Si deseas tener un
+            detalle, más adelante añadiremos aquí la información
+            correspondiente.
+          </p>
+        </div>
+      </section>
+
+      <!-- =====================================================
+     VESTIMENTA
+===================================================== -->
+
+      <section class="dresscode reveal">
+        <h2 class="section-title">Vestimenta</h2>
+
+        <span class="badge"> ✦ Código de vestimenta ✦ </span>
+
+        <p class="section-text">
+          Te invitamos a vestir de manera elegante y cómoda para acompañarnos en
+          esta celebración tan especial.
+        </p>
+      </section>
+
+      <!-- =====================================================
+     MENSAJES
+===================================================== -->
+
+      <section id="mensajes" class="reveal">
+        <h2 class="section-title">Déjame un mensaje</h2>
+
+        <p class="section-text">
+          Escribe unas palabras para Saray. Guardaremos cada mensaje con mucho
+          cariño.
+        </p>
+
+        <div class="message-form">
+          <input
+            id="muro-nombre"
+            type="text"
+            maxlength="50"
+            placeholder="Tu nombre"
+          />
+
+          <textarea
+            id="muro-mensaje"
+            maxlength="300"
+            rows="4"
+            placeholder="Escribe tu mensaje aquí..."
+          ></textarea>
+
+          <div class="counter">
+            <span id="muro-chars"> 0 </span>
+
+            /300
+          </div>
+
+          <button onclick="enviarMensaje()">💌 Enviar mensaje</button>
+        </div>
+
+        <div id="messageStatus" class="status"></div>
+
+        <div id="muro-mensajes" class="messages"></div>
+      </section>
+
+      <!-- =====================================================
+     CONFIRMACIÓN
+===================================================== -->
+
+      <section id="confirmacion" class="confirm-section reveal"></section>
+
+      <!-- =====================================================
+     MÚSICA
+===================================================== -->
+
+      <section id="cancion" class="reveal">
+        <h2 class="section-title">Una canción especial</h2>
+
+        <div class="music-card">
+          <div class="music-icon">🎵</div>
+
+          <div>
+            <h3>La canción de Saray</h3>
+
+            <p>La añadiremos poco a poco.</p>
+          </div>
+
+          <button id="btnPlay" class="play-btn" disabled>▶</button>
+        </div>
+      </section>
+
+      <!-- =====================================================
+     CIERRE
+===================================================== -->
+
+      <section class="final-message reveal">
+        <div class="cross">✝</div>
+
+        <p class="script">Te esperamos con mucho cariño</p>
+
+        <h2>Saray Martínez Suárez</h2>
+
+        <p>12 de septiembre de 2026 · 7:00 p. m.</p>
+      </section>
+    </main>
+
+    <!-- =====================================================
+     FOOTER
+===================================================== -->
+
+    <footer>
+      <h2>Saray</h2>
+
+      <p>Mi Primera Comunión</p>
+
+      <p>12 de septiembre de 2026</p>
+    </footer>
+
+    <!-- =====================================================
+     MENÚ INFERIOR
+===================================================== -->
+
+    <nav class="bottom-nav">
+      <a href="#fecha">
+        <span>📅</span>
+        <small>Fecha</small>
+      </a>
+
+      <a href="#evento">
+        <span>🎉</span>
+        <small>Evento</small>
+      </a>
+
+      <a href="#galeria">
+        <span>📸</span>
+        <small>Fotos</small>
+      </a>
+
+      <a href="#confirmacion">
+        <span>✅</span>
+        <small>Confirmar</small>
+      </a>
+    </nav>
+
+    <audio id="audio" src="multimedia/cancion.mp3" loop></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
