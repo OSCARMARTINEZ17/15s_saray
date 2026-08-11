@@ -103,8 +103,8 @@ function renderConfirmation() {
                 <p class="inv-text">
 
                     Queremos contar contigo
-                    en la celebración de la
-                    Primera Comunión de Saray.
+                    en la celebración de los
+                    15 Años de Saray.
 
                 </p>
 
