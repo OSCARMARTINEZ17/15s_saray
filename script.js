@@ -8,10 +8,10 @@ const CONFIG = {
   locationUrl: "https://share.google/fcJIMk2EB2hEdWbi9",
 
   confirmationEndpoint:
-    "https://script.google.com/macros/s/AKfycbyqYly84Ctp3hYjEf24T244ffp2d4J0f6-_9zzf1T4Ly7rUnU5C2ltZkHHPHcLjnctrHQ/exec",
+    "https://script.google.com/macros/s/AKfycbxxW-n3THaHD6JzgBUh47TBq0J8l1ITP5aV4chy5rYe5UVp-rP62yW2KpX9gQKR_eX5gQ/exec",
 
   messageEndpoint:
-    "https://script.google.com/macros/s/AKfycbyqYly84Ctp3hYjEf24T244ffp2d4J0f6-_9zzf1T4Ly7rUnU5C2ltZkHHPHcLjnctrHQ/exec",
+    "https://script.google.com/macros/s/AKfycbxxW-n3THaHD6JzgBUh47TBq0J8l1ITP5aV4chy5rYe5UVp-rP62yW2KpX9gQKR_eX5gQ/exec",
 };
 
 const $ = (id) => document.getElementById(id);
