@@ -39,7 +39,7 @@ async function cargarDatos() {
   mostrarLoading(true);
 
   try {
-    const respuesta = await fetch(API_URL + "?accion=todo");
+    const respuesta = await fetch(API_URL + "?action=todo");
 
     const datos = await respuesta.json();
 
@@ -94,6 +94,14 @@ function mostrarInvitados(invitados) {
     const acompanantes = invitado[1] || "0";
 
     const para = invitado[2] || "";
+
+    const linkFormula = invitado[3] || "";
+
+    /*
+     * Como Google Sheets devuelve
+     * el texto de la fórmula, mostramos
+     * un enlace generado directamente.
+     */
 
     const url = crearLink(nombre, acompanantes, para);
 
@@ -207,7 +215,7 @@ function mostrarMensajes(mensajes) {
 
   if (mensajes.length === 0) {
     mensajesContainer.innerHTML = `
-            <p>
+            <p class="empty">
                 Todavía no hay mensajes.
             </p>
             `;
@@ -227,20 +235,20 @@ function mostrarMensajes(mensajes) {
 
       const card = document.createElement("div");
 
-      card.className = "message-card";
+      card.className = "message";
 
       card.innerHTML = `
-                    <strong>
+                    <div class="message-name">
                         ${escapeHTML(nombre)}
-                    </strong>
+                    </div>
 
-                    <small>
-                        ${escapeHTML(fecha)}
-                    </small>
-
-                    <p>
+                    <div class="message-text">
                         ${escapeHTML(texto)}
-                    </p>
+                    </div>
+
+                    <div class="message-date">
+                        ${escapeHTML(fecha)}
+                    </div>
                     `;
 
       mensajesContainer.appendChild(card);
@@ -280,9 +288,16 @@ function actualizarEstadisticas(datos) {
  ****************************************************/
 
 function crearLink(nombre, acompanantes, para) {
+  /*
+     Importante: el parámetro debe llamarse "personas"
+     porque así lo lee script.js en la página pública
+     (params.get("personas")). Antes decía "acompanantes"
+     y por eso la invitación siempre mostraba "1 persona".
+     */
+
   return (
     "https://oscarmartinez17.github.io/" +
-    "15s_saray/" +
+    "primera_comunion_saray/" +
     "?nombre=" +
     encodeURIComponent(nombre) +
     "&personas=" +
