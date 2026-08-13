@@ -3,7 +3,7 @@
  ****************************************************/
 
 const API_URL =
-  "https://script.google.com/macros/s/AKfycbwmdSOOPVDDsceAwFcG0RR7D1dmayLxEA0cCAsDWKEuUO_m7pTLEJ3jrRKzUgQQeK3wIg/exec";
+  "https://script.google.com/macros/s/AKfycbxxW-n3THaHD6JzgBUh47TBq0J8l1ITP5aV4chy5rYe5UVp-rP62yW2KpX9gQKR_eX5gQ/exec";
 
 /****************************************************
  * ELEMENTOS
@@ -39,7 +39,7 @@ async function cargarDatos() {
   mostrarLoading(true);
 
   try {
-    const respuesta = await fetch(API_URL + "?action=todo");
+    const respuesta = await fetch(API_URL + "?accion=todo");
 
     const datos = await respuesta.json();
 
@@ -94,14 +94,6 @@ function mostrarInvitados(invitados) {
     const acompanantes = invitado[1] || "0";
 
     const para = invitado[2] || "";
-
-    const linkFormula = invitado[3] || "";
-
-    /*
-     * Como Google Sheets devuelve
-     * el texto de la fórmula, mostramos
-     * un enlace generado directamente.
-     */
 
     const url = crearLink(nombre, acompanantes, para);
 
@@ -288,16 +280,9 @@ function actualizarEstadisticas(datos) {
  ****************************************************/
 
 function crearLink(nombre, acompanantes, para) {
-  /*
-     Importante: el parámetro debe llamarse "personas"
-     porque así lo lee script.js en la página pública
-     (params.get("personas")). Antes decía "acompanantes"
-     y por eso la invitación siempre mostraba "1 persona".
-     */
-
   return (
     "https://oscarmartinez17.github.io/" +
-    "primera_comunion_saray/" +
+    "15s_saray/" +
     "?nombre=" +
     encodeURIComponent(nombre) +
     "&personas=" +

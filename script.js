@@ -428,4 +428,4 @@ const observer = new IntersectionObserver(
 
 document
   .querySelectorAll(".reveal")
-  .forEach((element) => observer.observe(element));
+  .forEach((element) => observer.observe(element)); 
