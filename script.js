@@ -282,92 +282,6 @@ if (textarea) {
 }
 
 /* =====================================================
-   GUARDAR MENSAJE
-===================================================== */
-
-function saveLocalMessage(name, message) {
-  const messages = JSON.parse(localStorage.getItem("saray_messages") || "[]");
-
-  messages.unshift({
-    name,
-
-    message,
-
-    date: new Date().toLocaleDateString("es-CO"),
-  });
-
-  localStorage.setItem(
-    "saray_messages",
-
-    JSON.stringify(messages.slice(0, 30)),
-  );
-
-  renderLocalMessages();
-}
-
-/* =====================================================
-   MOSTRAR MENSAJES
-===================================================== */
-
-function renderLocalMessages() {
-  const box = $("muro-mensajes");
-
-  if (!box) return;
-
-  const messages = JSON.parse(localStorage.getItem("saray_messages") || "[]");
-
-  box.innerHTML = messages
-    .map(
-      (message) => `
-
-                <article class="message">
-
-                    <strong>
-
-                        ${escapeHtml(message.name)}
-
-                    </strong>
-
-
-                    <p>
-
-                        ${escapeHtml(message.message)}
-
-                    </p>
-
-
-                    <small>
-
-                        ${message.date}
-
-                    </small>
-
-                </article>
-
-            `,
-    )
-    .join("");
-}
-
-function escapeHtml(value) {
-  return value.replace(
-    /[&<>"']/g,
-    (character) =>
-      ({
-        "&": "&amp;",
-
-        "<": "&lt;",
-
-        ">": "&gt;",
-
-        '"': "&quot;",
-
-        "'": "&#039;",
-      })[character],
-  );
-}
-
-/* =====================================================
    ENVIAR MENSAJE
 ===================================================== */
 
@@ -395,8 +309,6 @@ window.enviarMensaje = function () {
       `&mensaje=${encodeURIComponent(message)}`,
   ).catch(() => {});
 
-  saveLocalMessage(name, message);
-
   $("muro-nombre").value = "";
 
   $("muro-mensaje").value = "";
@@ -405,8 +317,6 @@ window.enviarMensaje = function () {
 
   status.textContent = "¡Mensaje enviado! 💌";
 };
-
-renderLocalMessages();
 
 /* =====================================================
    ANIMACIONES AL HACER SCROLL
@@ -428,4 +338,4 @@ const observer = new IntersectionObserver(
 
 document
   .querySelectorAll(".reveal")
-  .forEach((element) => observer.observe(element)); 
+  .forEach((element) => observer.observe(element));
