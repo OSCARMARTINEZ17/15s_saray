@@ -409,9 +409,9 @@ a {
   margin: 0 0 44px;
 }
 
-.cross svg,
-.hero-cross svg {
-  width: 50px;
+.cross img,
+.hero-cross img {
+  width: 150px;
 
   height: auto;
 
@@ -1108,15 +1108,81 @@ section {
 }
 
 /* ===============================
+   VESTIMENTA
+================================ */
+
+.dress-card {
+  max-width: 430px;
+
+  margin: 25px auto;
+
+  background: #fff;
+
+  border: 1px solid #ead8a0;
+
+  border-radius: 28px;
+
+  padding: 32px;
+
+  box-shadow: 0 12px 35px #9b657018;
+}
+
+.dress-icon {
+  font-size: 3rem;
+
+  margin-bottom: 12px;
+}
+
+.dress-card h3 {
+  font:
+    500 1.35rem "Playfair Display",
+    serif;
+
+  margin: 8px 0;
+}
+
+.dress-card p {
+  color: #888;
+
+  line-height: 1.7;
+
+  margin-bottom: 18px;
+}
+
+.dress-card p strong {
+  color: var(--rose-dark);
+}
+
+.dress-swatch {
+  display: inline-block;
+
+  width: 34px;
+
+  height: 34px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(145deg, var(--rose), var(--rose-dark));
+
+  box-shadow: 0 6px 16px #a9658044;
+}
+
+/* ===============================
    FOTO SARAY
 ================================ */
 
-.portrait {
+.portrait-wrap {
+  position: relative;
+
   width: min(80vw, 340px);
 
-  aspect-ratio: 1 / 1.12;
-
   margin: 25px auto;
+}
+
+.portrait {
+  width: 100%;
+
+  aspect-ratio: 1 / 1.12;
 
   border-radius: 45% 45% 22px 22px;
 
@@ -1135,6 +1201,73 @@ section {
   height: 100%;
 
   object-fit: cover;
+}
+
+.portrait-flower {
+  position: absolute;
+
+  font-size: 1.8rem;
+
+  pointer-events: none;
+
+  filter: drop-shadow(0 4px 8px #8d526622);
+
+  animation: floatDecor 6s ease-in-out infinite;
+
+  z-index: 2;
+}
+
+.pf-1 {
+  top: -16px;
+  left: -14px;
+  font-size: 2.1rem;
+  animation-delay: 0s;
+}
+
+.pf-2 {
+  top: -20px;
+  right: -10px;
+  font-size: 1.7rem;
+  animation-delay: 1.2s;
+  animation-duration: 7s;
+}
+
+.pf-3 {
+  bottom: -14px;
+  left: -16px;
+  font-size: 1.9rem;
+  animation-delay: 2.2s;
+  animation-duration: 6.5s;
+}
+
+.pf-4 {
+  bottom: -18px;
+  right: -14px;
+  font-size: 2rem;
+  animation-delay: 0.6s;
+  animation-duration: 7.5s;
+}
+
+.pf-5 {
+  top: 40%;
+  left: -26px;
+  font-size: 1.5rem;
+  animation-delay: 1.8s;
+  animation-duration: 6s;
+}
+
+.pf-6 {
+  top: 45%;
+  right: -26px;
+  font-size: 1.5rem;
+  animation-delay: 2.6s;
+  animation-duration: 7s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portrait-flower {
+    animation: none !important;
+  }
 }
 
 /* ===============================
