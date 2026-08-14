@@ -23,8 +23,20 @@
 ===================================================== -->
 
     <div id="envelope">
-      <div class="letter">
-        <div class="cross">👑</div>
+      <span class="envelope-decor deco-1">✨</span>
+      <span class="envelope-decor deco-2">🌸</span>
+      <span class="envelope-decor deco-3">✨</span>
+      <span class="envelope-decor deco-4">💛</span>
+      <span class="envelope-decor deco-5">🌸</span>
+      <span class="envelope-decor deco-6">✨</span>
+      <span class="envelope-decor deco-7">🌼</span>
+      <span class="envelope-decor deco-8">🌷</span>
+
+      <div class="envelope-scene">
+        <span class="envelope-corner corner-tl">🌸</span>
+        <span class="envelope-corner corner-tr">🌼</span>
+        <span class="envelope-corner corner-bl">🌷</span>
+        <span class="envelope-corner corner-br">🌸</span>
 
         <p class="eyebrow">Una invitación muy especial</p>
 
@@ -32,13 +44,20 @@
 
         <h2>Mis 15 Años</h2>
 
-        <p>
-          12 de septiembre de 2026
-          <br />
-          7:00 p. m.
-        </p>
+        <button
+          id="openInvitation"
+          class="envelope-visual"
+          aria-label="Abrir invitación"
+        >
+          <span class="envelope-flap-shape"></span>
+          <span class="envelope-fold-left"></span>
+          <span class="envelope-fold-right"></span>
+          <span class="envelope-seal"></span>
+        </button>
 
-        <button id="openInvitation">Abrir invitación</button>
+        <p class="envelope-date">12 de septiembre de 2026 · 7:00 p. m.</p>
+
+        <p class="envelope-hint">Dale clic al <strong>sello</strong></p>
       </div>
     </div>
 
@@ -276,21 +295,6 @@
       </section>
 
       <!-- =====================================================
-     VESTIMENTA
-===================================================== -->
-
-      <section class="dresscode reveal">
-        <h2 class="section-title">Vestimenta</h2>
-
-        <span class="badge"> ✦ Código de vestimenta ✦ </span>
-
-        <p class="section-text">
-          Te invitamos a vestir de manera elegante y cómoda para acompañarnos en
-          esta celebración tan especial.
-        </p>
-      </section>
-
-      <!-- =====================================================
      MENSAJES
 ===================================================== -->
 
@@ -364,7 +368,7 @@
 
         <p class="script">Te esperamos con mucho cariño</p>
 
-        <h2>Saray Martínez Suárez</h2>
+        <h2>Saray</h2>
 
         <p>12 de septiembre de 2026 · 7:00 p. m.</p>
       </section>
@@ -375,11 +379,7 @@
 ===================================================== -->
 
     <footer>
-      <h2>Saray</h2>
-
-      <p>Mis 15 Años</p>
-
-      <p>12 de septiembre de 2026</p>
+      <p class="footer-signature">Con todo mi cariño ♥</p>
     </footer>
 
     <!-- =====================================================
