@@ -535,6 +535,125 @@ button:hover,
   background: radial-gradient(circle at center, #ffffff20, transparent 55%);
 }
 
+.hero-decor {
+  position: absolute;
+
+  pointer-events: none;
+
+  font-size: 1.8rem;
+
+  filter: drop-shadow(0 4px 10px #3d222e33);
+
+  animation: floatDecor 6s ease-in-out infinite;
+}
+
+.hdeco-1 {
+  top: 10%;
+  left: 8%;
+  font-size: 2.2rem;
+  animation-delay: 0s;
+}
+
+.hdeco-2 {
+  top: 16%;
+  right: 10%;
+  font-size: 1.5rem;
+  animation-delay: 1.5s;
+  animation-duration: 7s;
+}
+
+.hdeco-3 {
+  bottom: 14%;
+  left: 10%;
+  font-size: 1.6rem;
+  animation-delay: 2.6s;
+  animation-duration: 6.5s;
+}
+
+.hdeco-4 {
+  bottom: 10%;
+  right: 8%;
+  font-size: 1.9rem;
+  animation-delay: 0.9s;
+  animation-duration: 7.5s;
+}
+
+.hdeco-5 {
+  top: 46%;
+  left: 4%;
+  font-size: 1.4rem;
+  animation-delay: 1.8s;
+  animation-duration: 8s;
+}
+
+.hero-corner {
+  position: absolute;
+
+  font-size: 2.4rem;
+
+  opacity: 0.4;
+
+  pointer-events: none;
+
+  filter: drop-shadow(0 4px 8px #3d222e33);
+}
+
+.hcorner-tl {
+  top: -16px;
+  left: -12px;
+  transform: rotate(-15deg);
+}
+
+.hcorner-tr {
+  top: -16px;
+  right: -12px;
+  transform: rotate(15deg) scaleX(-1);
+}
+
+.hcorner-bl {
+  bottom: -16px;
+  left: -12px;
+  transform: rotate(15deg) scaleX(-1);
+}
+
+.hcorner-br {
+  bottom: -16px;
+  right: -12px;
+  transform: rotate(-15deg);
+}
+
+.ornament {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  margin: 10px auto;
+
+  max-width: 220px;
+}
+
+.ornament span {
+  flex: 1;
+
+  height: 1px;
+
+  background: linear-gradient(90deg, transparent, currentColor, transparent);
+
+  opacity: 0.6;
+}
+
+.ornament em {
+  font-style: normal;
+
+  color: var(--gold);
+
+  font-size: 0.9rem;
+}
+
 .hero-content {
   position: relative;
 
@@ -553,6 +672,10 @@ button:hover,
   backdrop-filter: blur(6px);
 
   box-shadow: 0 20px 55px #3d222e33;
+}
+
+.hero-content .ornament {
+  color: var(--gold-light);
 }
 
 .hero h1 {
@@ -594,9 +717,40 @@ section {
 }
 
 .intro {
+  position: relative;
+
   max-width: 700px;
 
   margin: auto;
+}
+
+.intro-decor {
+  position: absolute;
+
+  pointer-events: none;
+
+  font-size: 1.7rem;
+
+  opacity: 0.7;
+
+  filter: drop-shadow(0 4px 8px #8d526622);
+
+  animation: floatDecor 6.5s ease-in-out infinite;
+}
+
+.ideco-1 {
+  top: -18px;
+  left: 2%;
+  font-size: 1.9rem;
+  animation-delay: 0.5s;
+}
+
+.ideco-2 {
+  top: -10px;
+  right: 4%;
+  font-size: 1.5rem;
+  animation-delay: 2s;
+  animation-duration: 7s;
 }
 
 .script {
@@ -606,7 +760,11 @@ section {
 
   color: var(--rose-dark);
 
-  margin-bottom: 10px;
+  margin-bottom: 6px;
+}
+
+.intro .ornament {
+  color: var(--rose-dark);
 }
 
 .section-title {
@@ -646,9 +804,37 @@ section {
 
   padding: 42px 30px;
 
-  box-shadow: 0 12px 35px #9b657018;
+  box-shadow:
+    0 12px 35px #9b657018,
+    0 0 0 6px #f8e8ee;
 
   position: relative;
+
+  overflow: visible;
+}
+
+.quote-corner {
+  position: absolute;
+
+  font-size: 2.2rem;
+
+  opacity: 0.55;
+
+  pointer-events: none;
+
+  filter: drop-shadow(0 4px 8px #8d526622);
+}
+
+.qcorner-tl {
+  top: -18px;
+  left: -14px;
+  transform: rotate(-15deg);
+}
+
+.qcorner-br {
+  bottom: -18px;
+  right: -14px;
+  transform: rotate(165deg);
 }
 
 .quote-mark {
@@ -662,7 +848,7 @@ section {
     6rem "Great Vibes",
     cursive;
 
-  color: #c7a24a33;
+  color: #c7a24a55;
 }
 
 .quote-card p {
