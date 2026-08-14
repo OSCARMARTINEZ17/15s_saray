@@ -237,7 +237,9 @@ a {
 .envelope-scene h1 {
   font-size: 3.4rem;
 
-  margin: 2px 0;
+  line-height: 1.15;
+
+  margin: 18px 0 2px;
 }
 
 .envelope-scene h2 {
@@ -339,11 +341,7 @@ a {
 
   border-radius: 50%;
 
-  background: radial-gradient(
-    circle at 32% 30%,
-    var(--gold-light),
-    var(--gold)
-  );
+  background: radial-gradient(circle at 32% 30%, var(--gold-light), var(--gold));
 
   box-shadow:
     0 8px 20px #00000033,
@@ -404,11 +402,11 @@ a {
 
   font-family: Georgia, serif;
 
-  font-size: 2.4rem;
+  font-size: 2.2rem;
 
-  line-height: 1.3;
+  line-height: 1;
 
-  margin: 0 0 26px;
+  margin: 0 0 44px;
 }
 
 .envelope-scene h1,
@@ -681,7 +679,9 @@ button:hover,
 .hero h1 {
   font-size: clamp(4rem, 10vw, 7.5rem);
 
-  line-height: 1;
+  line-height: 1.15;
+
+  margin-top: 28px;
 
   text-shadow: 0 4px 18px #3d222e55;
 }
