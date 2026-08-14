@@ -748,6 +748,32 @@ section {
   margin: auto;
 }
 
+.parents {
+  max-width: 500px;
+
+  margin: auto;
+}
+
+.parents .ornament {
+  color: var(--rose-dark);
+}
+
+.parents-names {
+  font:
+    2.4rem "Great Vibes",
+    cursive;
+
+  color: var(--rose-dark);
+}
+
+.parents-names .amp {
+  color: var(--gold);
+
+  font-size: 1.9rem;
+
+  margin: 0 6px;
+}
+
 .intro-decor {
   position: absolute;
 
