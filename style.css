@@ -1760,3 +1760,16 @@ footer {
     font-size: 0.8rem;
   }
 }
+
+/* Fuente especial para el mensaje de bienvenida */
+.intro-special-text {
+  font-family: "Playfair Display", serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.9;
+  color: var(--rose-dark);
+  letter-spacing: 0.2px;
+  max-width: 620px;
+  margin: 0 auto;
+}
