@@ -22,7 +22,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
 
   background: var(--cream);
 
@@ -382,8 +382,8 @@ a {
   margin-top: 6px;
 
   font:
-    500 1.1rem "Playfair Display",
-    serif;
+    500 1.1rem "Jost",
+    sans-serif;
 
   color: var(--rose-dark);
 }
@@ -420,19 +420,19 @@ a {
 
 .envelope-scene h1,
 .final-message h2 {
-  font-family: "Great Vibes", cursive;
+  font-family: "Jost", sans-serif;
 
   color: var(--rose-dark);
 }
 
 .hero h1 {
-  font-family: "Great Vibes", cursive;
+  font-family: "Jost", sans-serif;
 
   color: #fffaf7;
 }
 
 .envelope-scene h2 {
-  font-family: "Playfair Display", serif;
+  font-family: "Jost", sans-serif;
 
   font-weight: 500;
 
@@ -712,8 +712,8 @@ button:hover,
 
 .hero h2 {
   font:
-    500 clamp(1.5rem, 4vw, 2.5rem) "Playfair Display",
-    serif;
+    500 clamp(1.5rem, 4vw, 2.5rem) "Jost",
+    sans-serif;
 
   margin: 12px 0;
 
@@ -760,8 +760,8 @@ section {
 
 .parents-names {
   font:
-    2.4rem "Great Vibes",
-    cursive;
+    2.4rem "Jost",
+    sans-serif;
 
   color: var(--rose-dark);
 }
@@ -805,8 +805,8 @@ section {
 
 .script {
   font:
-    2.2rem "Great Vibes",
-    cursive;
+    2.2rem "Jost",
+    sans-serif;
 
   color: var(--rose-dark);
 
@@ -819,8 +819,8 @@ section {
 
 .section-title {
   font:
-    3.4rem "Great Vibes",
-    cursive;
+    3.4rem "Jost",
+    sans-serif;
 
   color: var(--rose-dark);
 
@@ -895,16 +895,16 @@ section {
   top: -5px;
 
   font:
-    6rem "Great Vibes",
-    cursive;
+    6rem "Jost",
+    sans-serif;
 
   color: #c7a24a55;
 }
 
 .quote-card p {
   font:
-    italic 1.05rem/1.9 "Playfair Display",
-    serif;
+    italic 1.05rem/1.9 "Jost",
+    sans-serif;
 }
 
 .signature {
@@ -1008,7 +1008,7 @@ section {
 
   place-items: center;
 
-  font: 2rem "Playfair Display";
+  font: 2rem "Jost";
 }
 
 .event-date div {
@@ -1053,8 +1053,8 @@ section {
   display: block;
 
   font:
-    2.3rem "Playfair Display",
-    serif;
+    2.3rem "Jost",
+    sans-serif;
 
   color: var(--gold);
 }
@@ -1102,7 +1102,7 @@ section {
 .event-icon {
   color: var(--gold);
 
-  font-family: "Playfair Display", serif;
+  font-family: "Jost", sans-serif;
 }
 
 .event-time {
@@ -1117,8 +1117,8 @@ section {
 .gift-card h3,
 .music-card h3 {
   font:
-    500 1.35rem "Playfair Display",
-    serif;
+    500 1.35rem "Jost",
+    sans-serif;
 
   margin: 8px 0;
 }
@@ -1179,8 +1179,8 @@ section {
 
 .dress-type h3 {
   font:
-    500 1.15rem "Playfair Display",
-    serif;
+    500 1.15rem "Jost",
+    sans-serif;
 
   margin: 0 0 2px;
 }
@@ -1520,8 +1520,8 @@ section {
 
 .inv-name {
   font:
-    2.4rem "Great Vibes",
-    cursive;
+    2.4rem "Jost",
+    sans-serif;
 
   color: var(--rose-dark);
 
@@ -1556,8 +1556,8 @@ section {
 
 #confirmacion .section-title {
   font:
-    500 2.3rem "Playfair Display",
-    serif;
+    500 2.3rem "Jost",
+    sans-serif;
 
   color: var(--rose-dark);
 
@@ -1634,8 +1634,8 @@ footer {
 
 .footer-signature {
   font:
-    1.6rem "Great Vibes",
-    cursive;
+    1.6rem "Jost",
+    sans-serif;
 
   color: #ead8a0;
 
