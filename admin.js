@@ -322,7 +322,7 @@ function crearLink(nombre, acompanantes, para) {
 
   return (
     "https://oscarmartinez17.github.io/" +
-    "primera_comunion_saray/" +
+    "15s_saray/" +
     "?nombre=" +
     encodeURIComponent(nombre) +
     "&personas=" +
