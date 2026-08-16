@@ -176,7 +176,7 @@ function mostrarConfirmaciones(confirmaciones) {
         ? `<span class="badge confirmed">✓ Asistirá</span>`
         : `<span class="badge declined">✗ No asistirá</span>`;
 
-      const totalPersonasConfirmacion = (parseInt(acompanantes) || 0) + 1;
+      const totalPersonasConfirmacion = parseInt(acompanantes) || 0;
 
       const fila = document.createElement("tr");
 
@@ -281,10 +281,12 @@ function actualizarEstadisticas(datos) {
   });
 
   /*
-     Personas confirmadas = invitado principal (1)
-     + sus acompañantes, sumado solo para las
-     confirmaciones cuya respuesta fue "si".
-     Ej: Luisa confirma con 5 acompañantes -> 6 personas.
+     Personas confirmadas = el número de "acompañantes"
+     tal como lo escribió el admin, que ya representa
+     el total de personas de esa tarjeta (no se suma nada
+     extra). Sumado solo para las confirmaciones cuya
+     respuesta fue "si".
+     Ej: Luisa confirma con "5" -> 5 personas en total.
      */
 
   let personasConfirmadas = 0;
@@ -295,7 +297,7 @@ function actualizarEstadisticas(datos) {
     if (respuesta === "si") {
       const acompanantes = parseInt(confirmacion[2]) || 0;
 
-      personasConfirmadas += acompanantes + 1;
+      personasConfirmadas += acompanantes;
     }
   });
 
