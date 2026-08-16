@@ -149,7 +149,7 @@ function mostrarConfirmaciones(confirmaciones) {
   if (confirmaciones.length === 0) {
     confirmacionesTable.innerHTML = `
             <tr>
-                <td colspan="4">
+                <td colspan="5">
                     Todavía no hay confirmaciones.
                 </td>
             </tr>
@@ -176,6 +176,8 @@ function mostrarConfirmaciones(confirmaciones) {
         ? `<span class="badge confirmed">✓ Asistirá</span>`
         : `<span class="badge declined">✗ No asistirá</span>`;
 
+      const totalPersonasConfirmacion = (parseInt(acompanantes) || 0) + 1;
+
       const fila = document.createElement("tr");
 
       fila.innerHTML = `
@@ -191,6 +193,10 @@ function mostrarConfirmaciones(confirmaciones) {
 
                     <td>
                         ${escapeHTML(acompanantes)}
+                    </td>
+
+                    <td>
+                        ${asistira ? totalPersonasConfirmacion : "—"}
                     </td>
 
                     <td>
@@ -274,9 +280,28 @@ function actualizarEstadisticas(datos) {
     personas += cantidad;
   });
 
+  /*
+     Personas confirmadas = invitado principal (1)
+     + sus acompañantes, sumado solo para las
+     confirmaciones cuya respuesta fue "si".
+     Ej: Luisa confirma con 5 acompañantes -> 6 personas.
+     */
+
+  let personasConfirmadas = 0;
+
+  confirmaciones.forEach((confirmacion) => {
+    const respuesta = (confirmacion[3] || "").toLowerCase();
+
+    if (respuesta === "si") {
+      const acompanantes = parseInt(confirmacion[2]) || 0;
+
+      personasConfirmadas += acompanantes + 1;
+    }
+  });
+
   totalInvitados.textContent = invitados.length;
 
-  totalConfirmados.textContent = confirmaciones.length;
+  totalConfirmados.textContent = personasConfirmadas;
 
   totalPersonas.textContent = personas;
 
