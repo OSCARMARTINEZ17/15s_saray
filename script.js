@@ -270,6 +270,34 @@ window.confirmarPersonalizado = function (respuesta) {
 };
 
 /* =====================================================
+   BOTÓN DE MÚSICA
+===================================================== */
+
+const btnPlay = $("btnPlay");
+
+const cancion = $("audio");
+
+if (btnPlay && cancion) {
+  btnPlay.disabled = false;
+
+  btnPlay.addEventListener("click", () => {
+    if (cancion.paused) {
+      cancion.play().catch(() => {});
+    } else {
+      cancion.pause();
+    }
+  });
+
+  cancion.addEventListener("play", () => {
+    btnPlay.textContent = "⏸";
+  });
+
+  cancion.addEventListener("pause", () => {
+    btnPlay.textContent = "▶";
+  });
+}
+
+/* =====================================================
    CONTADOR DE MENSAJES
 ===================================================== */
 
